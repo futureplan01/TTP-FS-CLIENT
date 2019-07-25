@@ -1,0 +1,96 @@
+.center{
+  text-align: center;
+}
+.button{
+  width: 90%;
+  margin-left: 5%;
+  height: 20px;
+}
+
+.input{
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  height: 20px;
+  box-shadow: 0 0 2px black;
+  text-align: center;
+}
+.split{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*SignIn*/
+#SignInContainer{
+  margin: 20%;
+  border: 3px solid black;
+}
+
+/*Header*/
+.HeaderList{
+  text-decoration: none;
+  padding: 6%;
+}
+.HeaderList:hover{
+  color:rgb(5, 60, 82);
+}
+#Header{
+  margin-left: 70%;
+  display: inline-block;
+  width: 500px;
+}
+#HeaderLeft{
+  border-right-color: black;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+#Header li{
+  display: inline-block;
+  margin: 2%;
+  text-decoration: none;
+}
+
+
+
+/*Register*/
+#Register{
+  margin: 0 auto;
+  border: 3px solid black;
+}
+
+/*PortFolio*/
+.stock{
+  display: inline-block;
+  padding: 4px;
+}
+.stockContainer{
+  border-bottom: 1px solid black;
+}
+.stockContainer:hover{
+  border: 1px solid rgb(5, 60, 82);
+  box-shadow: 1px;
+}
+#Portfolio{
+  margin-left: 10%;
+}
+#PortfolioContainer{
+  margin-top: 8%;
+  margin-left: 10%;
+  padding-right: 20%;
+  border-right: 1px black solid
+}
+#Purchase{
+  margin-left: 5%;
+}
+#PurchaseContainer{
+  margin-top: 8%;
+  margin-left: 15%;
+}
+
+/*Transaction*/
+#TransactionContainer{
+  margin-top: 8%;
+  margin-left: 15%;
+  padding-right: 20%;
+}
+
