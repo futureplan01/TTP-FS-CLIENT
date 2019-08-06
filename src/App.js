@@ -31,20 +31,22 @@ class App extends Component {
     this.updateAccount = this.updateAccount.bind(this);
     this.getAccount = this.getAccount.bind(this);
     this.getTransaction = this.getTransaction.bind(this);
-    this.verifyToken = this.verifyToken.bind(this);
+    this.verifySessionToken = this.verifySessionToken.bind(this);
     this.updateUser=this.updateUser.bind(this);
   }
   updateUser(x){
-    localStorage.setItem('token', x.token);
+    //For Session Storage to aut
+    //localStorage.setItem('token', x.token);
     this.setState({User:x,isAuth:true});
   }
 
-  verifyToken(){
+  
+  verifySessionToken(){
     let value = localStorage.getItem('token');
     if(!value) {
       return false;
     }else{
-      axios.post('https://my-stock-app.herokuapp.com/verifyToken',{
+      axios.post('https://my-stock-app.herokuapp.com/verifySessionToken',{
         crossDomain:true,
         token:value
       })
@@ -112,7 +114,7 @@ class App extends Component {
         } />
         
         <Route exact path = "/Portfolio" render={()=>
-          <Portfolio updateAccount={this.updateAccount} isAuth={this.state.isAuth}  verifyToken={this.verifyToken} updateTransaction ={this.updateTransaction} getAccount={this.getAccount}/>
+          <Portfolio updateAccount={this.updateAccount} isAuth={this.state.isAuth}  verifySessionToken={this.verifySessionToken} updateTransaction ={this.updateTransaction} getAccount={this.getAccount}/>
         }/>
 
         <Route exact path = "/Transaction" render={()=>

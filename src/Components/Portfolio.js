@@ -6,7 +6,7 @@ class Portfolio extends Component{
     
     constructor (props){
         super(props);
-        if(!this.props.isAuth) this.props.verifyToken()
+        if(!this.props.isAuth) this.props.verifySessionToken()
         this.state = {isAuth:false,stockArray: [], symbol: '', price:0,size: 1,error:false};
         this.getStocks = this.getStocks.bind(this);
         this.stockClick = this.stockClick.bind(this);
